@@ -10,6 +10,7 @@
     <div class="container">
         <h2>Solicitaçao de Acesso Remoto</h2>
         <form action="./acoes.php"  method="POST">
+            <input type="hidden" name="id">
             <label for="data">Data</label>
             <input type="date" id="data" name="data" required>
             

@@ -16,3 +16,5 @@ try {
 } catch (Exception $error) {
     echo "Error: {$error->getMessage()}";
 }
+
+?>

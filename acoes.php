@@ -26,9 +26,10 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         // Construindo a query SQL corretamente
         $sql = "INSERT INTO registro (data_, hora, solicitante, setor, demanda_tecnica, assinatura_solicitante, tecnico_el_remoto, chamado_helpdesk) 
                 VALUES ('$data_', '$hora', '$solicitante', '$setor', '$demanda', '$assinatura', '$tecnico', '$chamado')";
-
+         
+         $respostas = mysqli_query($conexao, $sql);
         // Executando a query
-        if (mysqli_query($conexao, $sql)) {
+        if ($respostas) {
             // Se a inserção for bem-sucedida, redireciona para o formulário
             header("Location: formulario.php");
             exit;
@@ -39,3 +40,4 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     }
 }
 ?>
+
